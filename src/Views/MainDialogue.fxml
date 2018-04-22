@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="130" prefWidth="300" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Java.Main">
+    <HBox>
+        <Region nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS"/>
+        <Label prefHeight="34.0" prefWidth="250.0"
+               text="Please choose which mode you wish to choose words from:" textAlignment="CENTER"
+               wrapText="true">
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </HBox.margin>
+        </Label>
+        <Region nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="15.0">
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+        <VBox.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0"/>
+        </VBox.margin>
+        <Region nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS"/>
+        <RadioButton fx:id="parallel" mnemonicParsing="false" selected="true" text="Parallel"
+                     toggleGroup="$wordChooseGroup">
+            <toggleGroup>
+                <ToggleGroup fx:id="wordChooseGroup"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="oneAtTime" mnemonicParsing="false" text="Sequential"
+                     toggleGroup="$wordChooseGroup"/>
+        <Region nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox>
+        <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0"/>
+        </VBox.margin>
+        <Region nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="btnChoose" mnemonicParsing="false" onAction="#btnChooseOnClick" text="OK"
+                textAlignment="CENTER">
+            <padding>
+                <Insets bottom="5.0" left="20.0" right="20.0" top="5.0"/>
+            </padding>
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+        </Button>
+        <Region nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS"/>
+    </HBox>
+</VBox>

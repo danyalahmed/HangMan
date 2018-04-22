@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Pane prefHeight="445.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.60">
+    <padding>
+        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </padding>
+    <VBox nodeOrientation="LEFT_TO_RIGHT" spacing="3.0">
+        <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+        </padding>
+        <ImageView fitWidth="696.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="2.0" top="2.0"/>
+            </VBox.margin>
+            <Image url="@../../resources/Images/hangmanLogo.png"/>
+        </ImageView>
+        <TextArea editable="false"
+                  text="HANGMAN&#10;&#10;Version: 2.0.1&#10;Build id: 10012017&#10;&#10;This piece of Software was built by Danyal Ahmed Ch (DAC).&#10;"
+                  wrapText="true">
+            <font>
+                <Font name="Century Schoolbook" size="14.0"/>
+            </font>
+            <VBox.margin>
+                <Insets left="5.0" right="5.0"/>
+            </VBox.margin>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </TextArea>
+    </VBox>
+</Pane>

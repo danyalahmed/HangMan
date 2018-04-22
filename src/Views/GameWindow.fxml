@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.GameController">
+    <VBox prefHeight="441.0" prefWidth="700.0" spacing="2.0">
+        <MenuBar fx:id="menuTop" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="2.0"/>
+            </VBox.margin>
+            <Menu fx:id="menuItemFile" mnemonicParsing="false" text="File">
+                <MenuItem fx:id="newGameMenuItem" mnemonicParsing="false" onAction="#newGame"
+                          text="New Game"/>
+                <MenuItem fx:id="saveGameMenuItem" mnemonicParsing="false"
+                          onAction="#saveGameMenuItemClick" text="Save Game"/>
+                <MenuItem fx:id="loadGameMenuItem" mnemonicParsing="false"
+                          onAction="#loadGameMenuItemClick" text="Load Game"/>
+                <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#menuItemClose"
+                          text="Close"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Difficulty">
+                <MenuItem fx:id="easyMenuBarItem" mnemonicParsing="false"
+                          onAction="#easyMenuBarItemClick" text="Easy"/>
+                <MenuItem fx:id="normalMenuBarItem" mnemonicParsing="false"
+                          onAction="#normalMenuBarItemClick" text="Normal"/>
+                <MenuItem fx:id="hardMenuBarItem" mnemonicParsing="false"
+                          onAction="#hardMenuBarItemClick" text="Hard"/>
+                <MenuItem fx:id="insaneMenuBarItem" mnemonicParsing="false"
+                          onAction="#insaneMenuBarItemClick" text="Insane"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem fx:id="tutorialMenuBarItem" mnemonicParsing="false"
+                          onAction="#tutorialMenuBarItemClick" text="Tutorial"/>
+                <MenuItem fx:id="aboutMenuBarItem" mnemonicParsing="false"
+                          onAction="#aboutMenuBarItemClick" text="About"/>
+            </Menu>
+        </MenuBar>
+        <HBox alignment="CENTER_RIGHT" spacing="3.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+            </VBox.margin>
+            <VBox alignment="CENTER" prefHeight="412.0" prefWidth="514.0">
+                <ImageView fx:id="hangmanImageHolder" fitHeight="318.0" fitWidth="513.0"
+                           pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS"/>
+                <HBox fx:id="hbWordToGuess" alignment="CENTER" prefHeight="94.0" prefWidth="490.0"
+                      spacing="3.0">
+                    <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+                    </padding>
+                </HBox>
+                <Label fx:id="lblGuessStatus">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0"/>
+                    </padding>
+                    <VBox.margin>
+                        <Insets bottom="5.0"/>
+                    </VBox.margin>
+                </Label>
+            </VBox>
+            <VBox alignment="BOTTOM_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="326.0"
+                  prefWidth="286.0" spacing="3.0">
+                <padding>
+                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+                </padding>
+                <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </HBox.margin>
+                <GridPane fx:id="gvLetters" hgap="4.0" vgap="4.0" VBox.vgrow="NEVER">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0"/>
+                    </padding>
+                </GridPane>
+                <HBox alignment="BOTTOM_RIGHT" spacing="5.0" VBox.vgrow="NEVER">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="3.0" right="3.0" top="3.0"/>
+                    </padding>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblIncorrect" prefHeight="17.0" prefWidth="123.0"
+                           text="Incorrect  Guess Left:" HBox.hgrow="ALWAYS"/>
+                    <Region prefHeight="17.0" prefWidth="0.0" HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblIncorrectPlaceHolder" prefHeight="17.0" prefWidth="28.0"
+                           text="6" HBox.hgrow="ALWAYS">
+                        <font>
+                            <Font name="System Bold" size="13.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="BOTTOM_RIGHT" layoutX="15.0" layoutY="380.0" spacing="5.0">
+                    <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0"/>
+                    </padding>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblScore" prefHeight="17.0" prefWidth="123.0" text="Score"
+                           HBox.hgrow="ALWAYS"/>
+                    <Region prefHeight="17.0" prefWidth="0.0" HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblScorePlaceHolder" prefHeight="17.0" prefWidth="28.0" text="0"
+                           HBox.hgrow="ALWAYS">
+                        <font>
+                            <Font name="System Bold" size="13.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</Pane>
